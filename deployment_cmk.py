@@ -10,7 +10,6 @@ import sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 import streamlit as st
 
-
 st.title('Model Deployment: SVM')
 
 st.header('User Input Parameters')
