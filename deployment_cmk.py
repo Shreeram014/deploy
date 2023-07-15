@@ -6,7 +6,7 @@
 
 import pandas as pd
 import numpy as np
-import sklearn.svm import SVC
+from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 import streamlit as st
 
