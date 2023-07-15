@@ -55,16 +55,16 @@ X = df.iloc[:, 0:9]
 y = df.iloc[:, 9]
 
 svm = SVC()
-svm.fit(X.values, y.values)
+model=svm.fit(X.values, y.values)
 
+st.button('Prediction')
+
+result = 0
 def satisfaction_prediction_svm(type_of_travel, class_, Flight_distance, Inflight_wifi_service, Online_boarding, Seat_comfort, Inflight_entertainment, On_board_service, Leg_room_service):
-    prediction = svm.predict([[type_of_travel, class_, Flight_distance, Inflight_wifi_service, Online_boarding, Seat_comfort, Inflight_entertainment, On_board_service, Leg_room_service]])
+    prediction = model.predict([[type_of_travel, class_, Flight_distance, Inflight_wifi_service, Online_boarding, Seat_comfort, Inflight_entertainment, On_board_service, Leg_room_service]])
     
     return prediction
 
-result = 0
-
-st.button('Prediction')
 
 result = satisfaction_prediction_svm(type_of_travel, class_, Flight_distance, Inflight_wifi_service, Online_boarding, Seat_comfort, Inflight_entertainment, On_board_service, Leg_room_service)
 
