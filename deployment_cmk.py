@@ -54,7 +54,7 @@ df[c] = df[c].apply(LabelEncoder().fit_transform)
 X = df.iloc[:, 0:9]
 y = df.iloc[:, 9]
 
-svm = SVC( c = 1, gamma = 10)
+svm = SVC( c = 1.0, gamma = 10)
 svm.fit(X.values, y.values)
 
 def satisfaction_prediction_svm(type_of_travel, class_, Flight_distance, Inflight_wifi_service, Online_boarding, Seat_comfort, Inflight_entertainment, On_board_service, Leg_room_service):
