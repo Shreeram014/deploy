@@ -63,7 +63,9 @@ def satisfaction_prediction_svm(type_of_travel, class_, Flight_distance, Infligh
     return prediction
 
 result = 0
+
 st.button('Prediction')
+
 result = satisfaction_prediction_svm(type_of_travel, class_, Flight_distance, Inflight_wifi_service, Online_boarding, Seat_comfort, Inflight_entertainment, On_board_service, Leg_room_service)
 
 if result < 0.7:
